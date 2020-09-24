@@ -11,6 +11,7 @@ class Product extends Component {
             <section className="product">
                 <h1>Product Details:</h1>
                 {Object.keys(product).map(key=><p key={key}>{key}:{product[key]}</p>)}
+                <p>URL:{this.props.location.pathname}</p>
             </section>
         )
     }

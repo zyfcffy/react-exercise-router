@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../styles/App.css';
 import {BrowserRouter, NavLink, Switch,Route} from 'react-router-dom';
-import Home from './Home.js';
+import Home from './Home';
 import About from './About';
 import MyProfile from './MyProfile';
 import Products from './Products';
@@ -23,10 +23,11 @@ class App extends Component {
           </header>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/about-us" component={About} />
-            <Route path="/my-profile" component={MyProfile} />
-            <Route path={"/products","/goods"} component={Products} />
-            <Route path="/product/:id" component={Product} />
+            <Route exact path="/about-us" component={About} />
+            <Route exact path="/my-profile" component={MyProfile} />
+            <Route exact path="/products" component={Products} />
+            <Route exact path="/goods" component={Products} />
+            <Route exact path="/products/:id" component={Product} />
             <Route component={Home}></Route>
           </Switch>
         </BrowserRouter>

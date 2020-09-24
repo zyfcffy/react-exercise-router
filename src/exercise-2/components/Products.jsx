@@ -9,7 +9,7 @@ class Products extends Component {
                 <h1>All Products</h1>
                 <div className="product">
                     {Object.keys(data).map((key,index) => 
-                    <Link key={index} className="product" to={`/product/${data[key].id}`}>{key}</Link>
+                    <Link key={index} className="product" to={`/products/${data[key].id}`}>{key}</Link>
                     )}
                 </div>
                 </section>
